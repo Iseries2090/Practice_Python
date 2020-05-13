@@ -1,4 +1,3 @@
-#First Repo
+# Practicepython.com Problems
 
-
-This is a second change.
+This is my attempt at solving exercise problems on Python and updating and using Github.

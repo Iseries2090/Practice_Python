@@ -15,44 +15,26 @@ Keep track of how many guesses the user has taken, and when the game ends, print
 import random
 
 #Set up the variables
-userGuess = 0
-num = random.randint(1,10)
-gameOn = True
+import random
+randnum = random.randint(1,11)
+game_on = True
 
-while gameOn == True:
-    
-
-    #Enable some error handling to make sure the user picks 1-10
-    try:
-        guessNum = int(input("Pick a number 1-10: "))
-    except:
-        print("That is not a valid option. Try again.")
-    else:
-        if guessNum > 10 or guessNum < 1:
-            print("Please pick a number between 1-10.")
+while True:
+    while True:
+        try:
+            usernum = int(input("Please input a number between 1 and 10: "))
+        except ValueError:
+            print("That is not a number, please try again")
         else:
-            continue
-
-    #Conditional statements
-    if guessNum < num:
-        print("You're guess is too low. Try again.")
-        userGuess += 1
-    elif guessNum > num:
-        print("You're guess is too high. Try again.")
-        userGuess += 1
+            if usernum > 10 or usernum < 1:
+                print("That is not in the range, please try again")
+            else:
+                break
+    if usernum > randnum:
+        print("{} is too high, please try again".format(usernum))
+    elif usernum < randnum:
+        print("{} is too low, please try again.".format(usernum))
     else:
-        print("That is correct!")
-    
-    #final print statments and check to see if the game should continue.
-    print("It took {} guess(es).".format(userGuess))
-    userInput = input("Do you wish to continue?  Type Yes to continue or exit to quit: ")
-    
-    if userInput.lower() == 'y':
-        gameOn == True
-
-        #reset the variables for new game
-        userGuess = 0
-        num = random.randint(1,10)
-    else:
-        gameOn == False
+        print("Congrats, {} is the right answer!".format(usernum))
+        exit()
     

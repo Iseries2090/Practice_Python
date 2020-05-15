@@ -15,11 +15,11 @@ shown back to me.
 """
 
 def get_string():
-    result = ''
+    result = ' '
     mystring = input("Enter a multi-word string: ")
     mystring = mystring.split()
     mystring = mystring[::-1]
-    result = result.join(mystring + " ")
+    result = result.join(mystring)
     print(result)
 
 get_string()

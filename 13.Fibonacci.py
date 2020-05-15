@@ -13,16 +13,21 @@ The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
 """
 
 def create_fibonnacci(num):
+    #Create an empty list to store the values
     result = []
+
+    #add the first two values into the list
     result.append(1)
     result.append(1)
-    for x in range (1,num+1):
+
+    #starting a counting loop to go up to the user input number of sequences
+    for x in range (1,num):
         nextNum = result[x-1]
         nextNum += result[x]
         result.append(nextNum)
-       # print(result)
+    return result
 
-
+#Asking the user for the number of sequences
 y = int(input("How many numbers in the fibonnacci sequence: "))
 
 print(create_fibonnacci(y))

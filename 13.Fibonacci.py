@@ -15,11 +15,12 @@ The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
 def create_fibonnacci(num):
     result = []
     result.append(1)
+    result.append(1)
     for x in range (1,num+1):
         nextNum = result[x-1]
         nextNum += result[x]
         result.append(nextNum)
-        print(result)
+       # print(result)
 
 
 y = int(input("How many numbers in the fibonnacci sequence: "))

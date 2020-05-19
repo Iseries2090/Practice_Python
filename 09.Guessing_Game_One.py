@@ -17,7 +17,6 @@ import random
 #Set up the variables
 import random
 randnum = random.randint(1,11)
-game_on = True
 
 while True:
     while True:
